@@ -81,6 +81,7 @@ export default {
         local: '本地存储',
         s3: 'S3存储',
         note: '更新后需要重启FileCodeBox',
+        local_path: '自定义本地文件存储绝对路径',
       },
       mei: '每',
       minute: '分钟',

@@ -62,6 +62,7 @@ DEFAULT_CONFIG = {
     'port': 12345,
     'showAdminAddr': 0,
     'robotsText': 'User-agent: *\nDisallow: /',
+    'local_path': '',
 }
 
 

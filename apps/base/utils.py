@@ -13,7 +13,7 @@ from core.utils import get_random_num, get_random_string, max_save_times_desc
 async def get_file_path_name(file: UploadFile) -> Tuple[str, str, str, str, str]:
     """获取文件路径和文件名"""
     today = datetime.datetime.now()
-    path = f"share/data/{today.strftime('%Y/%m/%d')}"
+    path = f"{today.strftime('%Y/%m/%d')}"
     prefix, suffix = os.path.splitext(file.filename)
     file_uuid = uuid.uuid4().hex
     uuid_file_name = f"{file_uuid}{suffix}"

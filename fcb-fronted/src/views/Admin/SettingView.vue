@@ -83,6 +83,11 @@
       </el-select>
       <small style="margin-left: 0.4rem">{{ t('admin.settings.file_storage.note') }}</small>
     </el-form-item>
+    <div v-if="config.file_storage==='local'">
+      <el-form-item size="large" :label="t('admin.settings.file_storage.local_path')">
+        <el-input v-model="config.local_path" />
+      </el-form-item>
+    </div>
     <div v-if="config.file_storage==='s3'">
       <el-form-item size="large" label="S3 AccessKeyId">
         <el-input v-model="config.s3_access_key_id" />
@@ -178,6 +183,7 @@ const config:any = ref({
   uploadCount: 1,
   errorMinute: 1,
   errorCount: 1,
+  local_path: '',
 });
 const refreshData = ()=>{
   request({
